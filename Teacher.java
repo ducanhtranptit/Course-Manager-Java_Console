@@ -216,7 +216,7 @@ public class Teacher {
         while (true) {
             Utils.clearScreen();
             showTeacherMenu();
-            System.out.print("Ban chon (1-5): ");
+            System.out.print("Ban chon (1-6): ");
             String customerChoice = scanner.nextLine();
 
             switch (customerChoice) {
