@@ -1,4 +1,5 @@
 package Object;
+
 import java.io.*;
 import java.util.*;
 
@@ -10,7 +11,7 @@ public class Course {
 
     public Course() {
         teachers = loadTeachersFromFile("teachers.csv");
-        students = loadStudentsFromFile("data.csv");
+        students = loadStudentsFromFile("students.csv");
     }
 
     private List<Teacher> loadTeachersFromFile(String filename) {
