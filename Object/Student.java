@@ -1,4 +1,9 @@
+package Object;
+
 import java.util.Scanner;
+
+import Utils.Utils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.io.FileWriter;
@@ -70,20 +75,20 @@ public class Student {
 
     public static void writeManyStudents(List<Student> students) {
         try {
-            FileWriter file = new FileWriter("data.csv");
+            FileWriter file = new FileWriter("students.csv");
             file.write("Ho va ten,Email,Ma sinh vien,Diem,Ma lop\n");
             for (Student stu : students) {
                 writeStudent(stu, file);
             }
             file.close();
         } catch (IOException e) {
-            System.out.println("Khong the mo file data.csv.");
+            System.out.println("Khong the mo file students.csv.");
         }
     }
 
     public static Student findStudent(String id) {
         try {
-            BufferedReader file = new BufferedReader(new FileReader("data.csv"));
+            BufferedReader file = new BufferedReader(new FileReader("students.csv"));
             String row;
             while ((row = file.readLine()) != null) {
                 if (row.contains(id)) {
@@ -93,14 +98,14 @@ public class Student {
             }
             file.close();
         } catch (IOException e) {
-            System.out.println("Khong the mo file data.csv.");
+            System.out.println("Khong the mo file students.csv.");
         }
         return null;
     }
 
     public static void printAllDataStudents() {
         try {
-            BufferedReader file = new BufferedReader(new FileReader("data.csv"));
+            BufferedReader file = new BufferedReader(new FileReader("students.csv"));
             file.readLine(); // skip header
             String row;
             while ((row = file.readLine()) != null) {
@@ -109,7 +114,7 @@ public class Student {
             }
             file.close();
         } catch (IOException e) {
-            System.out.println("Khong the mo file data.csv.");
+            System.out.println("Khong the mo file students.csv.");
         }
     }
 
@@ -117,18 +122,18 @@ public class Student {
         System.out.println("Them sinh vien");
         Student newStudent = readStudent();
         try {
-            FileWriter file = new FileWriter("data.csv", true);
+            FileWriter file = new FileWriter("students.csv", true);
             writeStudent(newStudent, file);
             file.close();
             System.out.println("\nXong!\n");
         } catch (IOException e) {
-            System.out.println("Khong the mo file data.csv.");
+            System.out.println("Khong the mo file students.csv.");
         }
     }
 
     public static void deleteStudent(String id) {
         try {
-            BufferedReader fileReader = new BufferedReader(new FileReader("data.csv"));
+            BufferedReader fileReader = new BufferedReader(new FileReader("students.csv"));
             List<String> fileContent = new ArrayList<>();
             String row;
             while ((row = fileReader.readLine()) != null) {
@@ -138,14 +143,14 @@ public class Student {
             }
             fileReader.close();
 
-            FileWriter fileWriter = new FileWriter("data.csv");
+            FileWriter fileWriter = new FileWriter("students.csv");
             for (String line : fileContent) {
                 fileWriter.write(line + "\n");
             }
             fileWriter.close();
             System.out.println("\nXong!\n");
         } catch (IOException e) {
-            System.out.println("Khong the mo file data.csv.");
+            System.out.println("Khong the mo file students.csv.");
         }
     }
 
@@ -168,7 +173,7 @@ public class Student {
             }
 
             try {
-                BufferedReader fileReader = new BufferedReader(new FileReader("data.csv"));
+                BufferedReader fileReader = new BufferedReader(new FileReader("students.csv"));
                 List<String> fileContent = new ArrayList<>();
                 String row;
                 while ((row = fileReader.readLine()) != null) {
@@ -180,14 +185,14 @@ public class Student {
                 }
                 fileReader.close();
 
-                FileWriter fileWriter = new FileWriter("data.csv");
+                FileWriter fileWriter = new FileWriter("students.csv");
                 for (String line : fileContent) {
                     fileWriter.write(line + "\n");
                 }
                 fileWriter.close();
                 System.out.println("\nXong!\n");
             } catch (IOException e) {
-                System.out.println("Khong the mo file data.csv.");
+                System.out.println("Khong the mo file students.csv.");
             }
         } else {
             System.out.println("Khong tim thay sinh vien voi ma so " + id);
