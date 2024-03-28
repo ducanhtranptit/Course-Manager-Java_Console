@@ -52,7 +52,7 @@ public class Main {
                                 Teacher.teacherMain();
                                 break;
                             case "3":
-                                Course.mainClassManager();
+                                Course.classManagerMain();
                                 break;
                             case "4":
                                 break;

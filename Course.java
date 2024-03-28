@@ -71,7 +71,7 @@ public class Course {
         }
     }
 
-    public static void mainClassManager() {
+    public static void classManagerMain() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             Course classManager = new Course();
