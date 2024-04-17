@@ -1,4 +1,5 @@
 package Object;
+
 import java.util.Scanner;
 
 import Utils.Utils;
@@ -11,10 +12,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class Teacher {
-    String name;
-    String email;
-    String teacher_id;
-    String class_id; // Mã lớp
+    private String name;
+    private String email;
+    private String teacher_id;
+    private String class_id; // Mã lớp
 
     public Teacher() {
     }
@@ -23,6 +24,38 @@ public class Teacher {
         this.name = name;
         this.email = email;
         this.teacher_id = teacher_id;
+        this.class_id = class_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTeacher_id() {
+        return teacher_id;
+    }
+
+    public void setTeacher_id(String teacher_id) {
+        this.teacher_id = teacher_id;
+    }
+
+    public String getClass_id() {
+        return class_id;
+    }
+
+    public void setClass_id(String class_id) {
         this.class_id = class_id;
     }
 

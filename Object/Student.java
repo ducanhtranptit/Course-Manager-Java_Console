@@ -12,11 +12,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class Student {
-    String name;
-    String email;
-    String stu_id;
-    String mark;
-    String class_id;
+
+    private String name;
+    private String email;
+    private String stu_id;
+    private String mark;
+    private String class_id;
 
     public Student() {
     }
@@ -26,6 +27,46 @@ public class Student {
         this.email = email;
         this.stu_id = stu_id;
         this.mark = mark;
+        this.class_id = class_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getStu_id() {
+        return stu_id;
+    }
+
+    public void setStu_id(String stu_id) {
+        this.stu_id = stu_id;
+    }
+
+    public String getMark() {
+        return mark;
+    }
+
+    public void setMark(String mark) {
+        this.mark = mark;
+    }
+
+    public String getClass_id() {
+        return class_id;
+    }
+
+    public void setClass_id(String class_id) {
         this.class_id = class_id;
     }
 
